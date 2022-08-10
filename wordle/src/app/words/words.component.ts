@@ -9,12 +9,12 @@ import { wordlist } from './test';
   styleUrls: ['./words.component.css']
 })
 export class WordsComponent implements OnInit {
-
+  test: number
   constructor() { 
 
-    const listLength = wordlist.length;
+    const listLength = wordlist.length
     console.log("size: " + listLength)
-
+    this.test = listLength
   }
 
   ngOnInit(): void {
