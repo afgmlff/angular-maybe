@@ -17,12 +17,21 @@ export class UserinputComponent {
   checkEntry1(value: string) {
     if(value.length == 5){
       this.onEnter1(value)
+      this.checkBefore()
     }
   }
 
   checkEntry2(value: string) {
     if(value.length == 5){
       this.onEnter2(value)
+    }
+  }
+
+
+  checkBefore() {
+    var tempDiv = document.getElementById("hidden")
+    if (this.valueArr[0] != null && tempDiv != null){
+      tempDiv.style.display = "block"
     }
   }
 
