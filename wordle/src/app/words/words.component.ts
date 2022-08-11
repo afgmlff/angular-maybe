@@ -26,6 +26,10 @@ export class WordsComponent implements OnInit {
 
     this.rndWord = wordlist[Math.floor(Math.random()*this.test)]
 
+    while (this.rndWord.length != 5){
+      this.rndWord = wordlist[Math.floor(Math.random()*this.test)]
+    }
+
   }
 
   ngOnInit(): void {
