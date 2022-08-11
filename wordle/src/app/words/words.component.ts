@@ -28,9 +28,10 @@ export class WordsComponent implements OnInit {
 
     while (this.rndWord.length != 5){
       this.rndWord = wordlist[Math.floor(Math.random()*this.test)]
-    }
-
+    } //palavra secreta
+    
   }
+
 
   ngOnInit(): void {
   }
