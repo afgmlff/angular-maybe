@@ -12,10 +12,12 @@ import { wordlist } from './test';
 export class WordsComponent implements OnInit {
   test: number
   rndWord: string
+  rndArr: any[] = []
+
   constructor() { 
 
     const listLength = wordlist.length
-    console.log("size: " + listLength)
+//    console.log("size: " + listLength)
     this.test = listLength
 
     /*
@@ -30,8 +32,11 @@ export class WordsComponent implements OnInit {
       this.rndWord = wordlist[Math.floor(Math.random()*this.test)]
     } //palavra secreta
     
-  }
+    this.rndArr = this.rndWord.split('').slice(0, 5)
 
+    console.log(this.rndArr)
+
+  }
 
   ngOnInit(): void {
   }

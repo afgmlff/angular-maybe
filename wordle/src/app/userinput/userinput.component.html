@@ -1,5 +1,10 @@
 <p style="color: white">userinput:</p>
-<input #box (keyup.enter)="onEnter(box.value)" maxlength="5">
-<p style="color: white">{{value}}</p>
 
-<p style="color: white">{{charArr}}</p>
+<input #box (keyup.enter)="checkEntry1(box.value)" maxlength="5" style="text-transform:uppercase">
+<p style="color: white">box 1: {{this.valueArr[0]}}</p>
+
+<input #box2 (keyup.enter)="checkEntry2(box2.value)" maxlength="5" style="text-transform:uppercase">
+<p style="color: white">box 2: {{this.valueArr[1]}}</p>
+
+
+<!-- <p style="color: white">{{charArr}}</p>    -->
