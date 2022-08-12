@@ -3,11 +3,18 @@
     <span>
     <input id=show-hide #box (keyup.enter)="checkEntry1(box.value)" maxlength="5" style="text-transform:uppercase; text-align: center;">
     </span>
-    <span style="color: white; display: flex; justify-content: center;">{{this.valueArr[0]}}
-    </span>
+    
+    <div style="display: flex; justify-content: center;">
+        <span style="color: white;">{{this.charArr1[0]}}</span>
+        <span style="color: white;">{{this.charArr1[1]}}</span>
+        <span style="color: white;">{{this.charArr1[2]}}</span>
+        <span style="color: white;">{{this.charArr1[3]}}</span>
+        <span style="color: white;">{{this.charArr1[4]}}</span>
+    </div>
+    
 
     <div id=hidden style="display:none">
-        <input #box2 (keyup.enter)="checkEntry2(box2.value)" maxlength="5" style="text-transform:uppercase">
+        <input #box2 (keyup.enter)="checkEntry2(box2.value)" maxlength="5" style="text-transform:uppercase; text-align: center;">
 <!--    <p style="color: white">box 2: {{this.valueArr[1]}}</p> -->
     </div>
 
