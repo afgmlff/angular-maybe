@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { WordsComponent } from '../words/words.component';
+
 
 @Component({
   selector: 'app-userinput',
@@ -7,6 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserinputComponent {
 
+  @Input() secretWord = '' //recebe rndWord do pai
+
+  
   value: string = ''
 
   valueArr: string[] = []
@@ -20,6 +25,7 @@ export class UserinputComponent {
     if(value.length == 5){
       this.onEnter1(value)
       this.checkBefore()
+
     }
   }
 
@@ -76,9 +82,15 @@ export class UserinputComponent {
   /**
    * Lógica para as cores de retorno pós enter
    */
+  checkCharPresence() {
+    for(let i=0; i<5; i++){
+//      if(rndWord )
+    }
+  }
 
-
-
+  changeYellow(i: number) {
+    //join ch + i -> ch1, ch2...
+  }
 
 
 
