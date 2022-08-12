@@ -1,8 +1,10 @@
 <!-- <p style="color: white">userinput:</p> -->
 <div>
-    
-    <input #box (keyup.enter)="checkEntry1(box.value)" maxlength="5" style="text-transform:uppercase">
-    <!-- <p style="color: white">box 1: {{this.valueArr[0]}}</p> -->
+    <span>
+    <input id=show-hide #box (keyup.enter)="checkEntry1(box.value)" maxlength="5" style="text-transform:uppercase; text-align: center;">
+    </span>
+    <span style="color: white; display: flex; justify-content: center;">{{this.valueArr[0]}}
+    </span>
 
     <div id=hidden style="display:none">
         <input #box2 (keyup.enter)="checkEntry2(box2.value)" maxlength="5" style="text-transform:uppercase">
