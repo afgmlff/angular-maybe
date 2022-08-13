@@ -89,32 +89,28 @@ export class UserinputComponent {
     var tempCh
     this.secretChArr = this.secretWord.split('').slice(0, 5)
     var tempSecret = this.secretWord
-    var tempSecretChArr
     
+    var matchPosition = "green"
+    var presentDiffPosition = "yellow"
 
     for(let i=0; i<5; i++){
       if(this.secretChArr[i] == this.charArr1[i]){
         tempCh = document.getElementById(index + (i+1).toString())
         if(tempCh != null)
-          tempCh.style.color = "green"
+          tempCh.style.color = matchPosition
 
         console.log(this.secretChArr[i])
         tempSecret = tempSecret.replace(this.secretChArr[i], '')
       }
     }
 
-
-    tempSecretChArr = tempSecret.split('').slice(0, tempSecret.length)
-
-    console.log("tempSecretArr: " + tempSecretChArr)
-
     for(let i=0; i<5; i++){
       if(tempSecret.includes(this.charArr1[i])){
   //      console.log("Contém " + this.charArr1[i])
         tempCh = document.getElementById(index + (i+1).toString())
 
-        if(tempCh != null)
-          tempCh.style.color = "yellow"
+        if(tempCh != null && tempCh.style.color != matchPosition)
+          tempCh.style.color = presentDiffPosition
       }
     }
 
