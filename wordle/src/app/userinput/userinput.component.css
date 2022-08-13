@@ -1,0 +1,11 @@
+.inputBox {
+    border: none;
+    appearance: none;
+    background: #7c7c7c;
+    padding: 12px;
+    font-size: 60px;
+    letter-spacing: 20px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+    width: 280px;
+}
