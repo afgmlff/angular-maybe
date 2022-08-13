@@ -11,6 +11,7 @@ export class UserinputComponent {
 
   @Input() secretWord = '' //recebe rndWord do pai
 
+  secretChArr: any [] = []
   
   value: string = ''
 
@@ -86,6 +87,7 @@ export class UserinputComponent {
   checkCharPresence() {
     var index = "ch"
     var tempCh
+    this.secretChArr = this.secretWord.split('').slice(0, 5)
     for(let i=0; i<5; i++){
       if(this.secretWord.includes(this.charArr1[i])){
         console.log("Contém " + this.charArr1[i])
@@ -93,6 +95,14 @@ export class UserinputComponent {
 
         if(tempCh != null)
           tempCh.style.color = "yellow"
+      }
+    }
+
+    for(let i=0; i<5; i++){
+      if(this.secretChArr[i] == this.charArr1[i]){
+        tempCh = document.getElementById(index + (i+1).toString())
+        if(tempCh != null)
+          tempCh.style.color = "green"
       }
     }
   }
