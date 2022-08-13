@@ -1,11 +1,64 @@
+.outlineInputBox{
+    border: none;
+    appearance: none;
+    background: rgb(36, 36, 36);
+    color: aliceblue;
+    padding: 12px;
+    font-size: 60px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+    width: 400px;
+    padding-right: -40px;
+}
+
 .inputBox {
     border: none;
     appearance: none;
-    background: #7c7c7c;
+    background: rgb(36, 36, 36);
+    color: aliceblue;
     padding: 12px;
-    font-size: 60px;
-    letter-spacing: 20px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    margin-left: 30px; /*compensar spacing after last letter*/
     font-family: 'Source Code Pro';
     font-weight: bold;
-    width: 280px;
+    width: 270px;
+}
+
+#ch1{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    margin-left: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#ch2{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+#ch3{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+#ch4{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+#ch5{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
 }
