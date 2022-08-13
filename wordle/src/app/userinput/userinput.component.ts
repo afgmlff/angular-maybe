@@ -90,38 +90,57 @@ export class UserinputComponent {
     this.secretChArr = this.secretWord.split('').slice(0, 5)
     var tempSecret = this.secretWord
     
-    var matchPosition = "green"
-    var presentDiffPosition = "yellow"
+    var matchPosition = "green"         //char certo na posicao certa
+    var presentDiffPosition = "yellow"  //char certo na posicao errada
 
+
+    //troca cor pra verde caso acerte
     for(let i=0; i<5; i++){
       if(this.secretChArr[i] == this.charArr1[i]){
-        tempCh = document.getElementById(index + (i+1).toString())
-        if(tempCh != null)
-          tempCh.style.color = matchPosition
-
-        console.log(this.secretChArr[i])
-        tempSecret = tempSecret.replace(this.secretChArr[i], '')
+        this.changeGreen(i, tempSecret)
       }
     }
 
+
+    //troca o restante pra amarelo case semi-acerte e já não esteja verde
     for(let i=0; i<5; i++){
       if(tempSecret.includes(this.charArr1[i])){
-  //      console.log("Contém " + this.charArr1[i])
-        tempCh = document.getElementById(index + (i+1).toString())
-
-        if(tempCh != null && tempCh.style.color != matchPosition)
-          tempCh.style.color = presentDiffPosition
+        this.changeYellow(i, tempSecret)
       }
     }
 
  
   }
 
-  changeYellow(i: number) {
-    //join ch + i -> ch1, ch2...
+
+
+  //função pra detectar char que deve ser amarelo
+  changeYellow(i: number, tempSecret: string) {
+    var index = "ch"
+    var tempCh
+    var presentDiffPosition = "yellow" 
+    var matchPosition = "green"
+
+    tempCh = document.getElementById(index + (i+1).toString())
+
+      if(tempCh != null && tempCh.style.color != matchPosition)
+        tempCh.style.color = presentDiffPosition
   }
 
 
+  //função pra detectar char que deve ser verde
+  changeGreen(i: number, tempSecret: string){
+    var index = "ch"
+    var tempCh
+    var matchPosition = "green" 
+    
+    tempCh = document.getElementById(index + (i+1).toString())
+    if(tempCh != null)
+      tempCh.style.color = matchPosition
+
+    console.log(this.secretChArr[i])
+    tempSecret = tempSecret.replace(this.secretChArr[i], '')
+  }
 
   constructor() { }
 
