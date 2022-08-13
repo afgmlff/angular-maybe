@@ -61,6 +61,7 @@ export class UserinputComponent {
 
     this.charArr1 = this.valueArr[0].split('').slice(0, 5)  //array palavra 1
     console.log("box 1: " + this.charArr1)
+    this.checkCharPresence()
   }
 
 
@@ -83,8 +84,16 @@ export class UserinputComponent {
    * Lógica para as cores de retorno pós enter
    */
   checkCharPresence() {
+    var index = "ch"
+    var tempCh
     for(let i=0; i<5; i++){
-//      if(rndWord )
+      if(this.secretWord.includes(this.charArr1[i])){
+        console.log("Contém " + this.charArr1[i])
+        tempCh = document.getElementById(index + (i+1).toString())
+
+        if(tempCh != null)
+          tempCh.style.color = "yellow"
+      }
     }
   }
 
