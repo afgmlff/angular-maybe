@@ -165,7 +165,7 @@ export class UserinputComponent {
     var presentDiffPosition = "yellow"  //char certo na posicao errada
 
 
-    //troca cor pra verde caso acerte
+    //verde caso acerte
     for(let i=0; i<5; i++){
       if(this.secretChArr[i] == this.charArr2[i]){
         this.changeGreenBox2(i)
