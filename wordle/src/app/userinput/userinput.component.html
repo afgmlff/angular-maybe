@@ -1,22 +1,85 @@
 <!-- <p style="color: white">userinput:</p> -->
 <div>
     <span>
-    <input class=inputBox id=show-hide #box (keyup.enter)="checkEntry1(box.value)" maxlength="5" style="text-transform:uppercase;">
+    <input class=inputBox id=show-hide1 #box1 (keyup.enter)="checkEntry1(box1.value)" maxlength="5" style="text-transform:uppercase;">
     </span>
 
     <div style="display: flex; justify-content: center;">
-        <span id="ch1" style="color: white;">{{this.charArr1[0]}}</span>
-        <span id="ch2" style="color: white;">{{this.charArr1[1]}}</span>
-        <span id="ch3" style="color: white;">{{this.charArr1[2]}}</span>
-        <span id="ch4" style="color: white;">{{this.charArr1[3]}}</span>
-        <span id="ch5" style="color: white;">{{this.charArr1[4]}}</span>
+        <span id="b1ch1" style="color: white;">{{this.charArr1[0]}}</span>
+        <span id="b1ch2" style="color: white;">{{this.charArr1[1]}}</span>
+        <span id="b1ch3" style="color: white;">{{this.charArr1[2]}}</span>
+        <span id="b1ch4" style="color: white;">{{this.charArr1[3]}}</span>
+        <span id="b1ch5" style="color: white;">{{this.charArr1[4]}}</span>
     </div>
     
 
-    <div id=hidden style="display:none">
-        <input #box2 (keyup.enter)="checkEntry2(box2.value)" maxlength="5" style="text-transform:uppercase; text-align: center;">
-<!--    <p style="color: white">box 2: {{this.valueArr[1]}}</p> -->
+    <div id=hiddenBox2 style="display:none">
+
+        <span>
+            <input class=inputBox id=show-hide2 #box2 (keyup.enter)="checkEntry2(box2.value)" maxlength="5" style="text-transform:uppercase;">
+        </span>
+        
+        <div style="display: flex; justify-content: center;">
+            <span id="b2ch1" style="color: white;">{{this.charArr2[0]}}</span>
+            <span id="b2ch2" style="color: white;">{{this.charArr2[1]}}</span>
+            <span id="b2ch3" style="color: white;">{{this.charArr2[2]}}</span>
+            <span id="b2ch4" style="color: white;">{{this.charArr2[3]}}</span>
+            <span id="b2ch5" style="color: white;">{{this.charArr2[4]}}</span>
+        </div>
+
     </div>
+
+
+    <div id=hiddenBox3 style="display:none">
+
+        <span>
+            <input class=inputBox id=show-hide3 #box3 (keyup.enter)="checkEntry3(box3.value)" maxlength="5" style="text-transform:uppercase;">
+        </span>
+        
+        <div style="display: flex; justify-content: center;">
+            <span id="b3ch1" style="color: white;">{{this.charArr3[0]}}</span>
+            <span id="b3ch2" style="color: white;">{{this.charArr3[1]}}</span>
+            <span id="b3ch3" style="color: white;">{{this.charArr3[2]}}</span>
+            <span id="b3ch4" style="color: white;">{{this.charArr3[3]}}</span>
+            <span id="b3ch5" style="color: white;">{{this.charArr3[4]}}</span>
+        </div>
+
+    </div>
+
+
+    <div id=hiddenBox4 style="display:none">
+
+        <span>
+            <input class=inputBox id=show-hide4 #box4 (keyup.enter)="checkEntry4(box4.value)" maxlength="5" style="text-transform:uppercase;">
+        </span>
+        
+        <div style="display: flex; justify-content: center;">
+            <span id="b4ch1" style="color: white;">{{this.charArr4[0]}}</span>
+            <span id="b4ch2" style="color: white;">{{this.charArr4[1]}}</span>
+            <span id="b4ch3" style="color: white;">{{this.charArr4[2]}}</span>
+            <span id="b4ch4" style="color: white;">{{this.charArr4[3]}}</span>
+            <span id="b4ch5" style="color: white;">{{this.charArr4[4]}}</span>
+        </div>
+
+    </div>
+
+
+    <div id=hiddenBox5 style="display:none">
+
+        <span>
+            <input class=inputBox id=show-hide5 #box5 (keyup.enter)="checkEntry5(box5.value)" maxlength="5" style="text-transform:uppercase;">
+        </span>
+        
+        <div style="display: flex; justify-content: center;">
+            <span id="b5ch1" style="color: white;">{{this.charArr5[0]}}</span>
+            <span id="b5ch2" style="color: white;">{{this.charArr5[1]}}</span>
+            <span id="b5ch3" style="color: white;">{{this.charArr5[2]}}</span>
+            <span id="b5ch4" style="color: white;">{{this.charArr5[3]}}</span>
+            <span id="b5ch5" style="color: white;">{{this.charArr5[4]}}</span>
+        </div>
+
+    </div>
+
 
 </div>
 

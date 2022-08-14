@@ -25,7 +25,8 @@
     width: 270px;
 }
 
-#ch1{
+/*box 1*/
+#b1ch1{
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
@@ -34,28 +35,204 @@
     font-weight: bold;
 }
 
-#ch2{
+#b1ch2{
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
-#ch3{
+
+#b1ch3{
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
-#ch4{
+
+#b1ch4{
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
-#ch5{
+
+#b1ch5{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+/*box 2*/
+
+#b2ch1{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    margin-left: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b2ch2{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b2ch3{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b2ch4{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b2ch5{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+/*box 3*/
+
+#b3ch1{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    margin-left: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b3ch2{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b3ch3{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b3ch4{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b3ch5{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+/*box 4*/
+
+#b4ch1{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    margin-left: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b4ch2{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b4ch3{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b4ch4{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b4ch5{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+
+/*box 5*/
+
+#b5ch1{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    margin-left: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b5ch2{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b5ch3{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b5ch4{
+    padding-top: 12px;
+    font-size: 40px;
+    letter-spacing: 30px;
+    font-family: 'Source Code Pro';
+    font-weight: bold;
+}
+
+#b5ch5{
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
