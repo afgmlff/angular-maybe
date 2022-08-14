@@ -496,6 +496,96 @@ export class UserinputComponent {
     }
   
 
+     /**
+   * Sexto input, mesmas funções
+   */
+
+
+
+  /**
+    * Check input size box 6
+    */
+   checkEntry6(value: string) {
+    if(value.length == 5){
+      this.onEnter6(value)
+      this.checkBefore6()
+    }
+  }
+
+  checkBefore6() {
+//    var tempDiv = document.getElementById("hiddenBox6")
+    var showHide = document.getElementById("show-hide6")
+    if (this.valueArr[5] != null && showHide != null){
+//      tempDiv.style.display = "block"
+      showHide.style.display = "none"
+    }
+  }
+
+  /**
+   * Get input box 6
+   */
+   onEnter6(value: string) {
+    this.valueArr[5] = value.toUpperCase()
+    this.charArr6 = this.valueArr[5].split('').slice(0, 5)
+    console.log("box 6:" + this.charArr6)
+    this.checkCharPresence6()
+    this.tempSecret1 = this.secretWord
+  }
+
+  checkCharPresence6() {
+    var index = "b6ch"
+    var tempCh
+    this.secretChArr = this.secretWord.split('').slice(0, 5)
+    
+    var matchPosition = "green"         //char certo na posicao certa
+    var presentDiffPosition = "yellow"  //char certo na posicao errada
+
+
+    //troca cor pra verde caso acerte
+    for(let i=0; i<5; i++){
+      if(this.secretChArr[i] == this.charArr6[i]){
+        this.changeGreenBox6(i)
+      }
+    }
+
+
+    //troca o restante pra amarelo case semi-acerte e já não esteja verde
+    for(let i=0; i<5; i++){
+      if(this.tempSecret1.includes(this.charArr6[i])){
+        this.changeYellowBox6(i)
+      }
+    }
+  }
+
+
+    //função pra detectar char que deve ser amarelo
+    changeYellowBox6(i: number) {
+      var index = "b6ch"
+      var tempCh
+      var presentDiffPosition = "yellow" 
+      var matchPosition = "green"
+  
+      tempCh = document.getElementById(index + (i+1).toString())
+  
+        if(tempCh != null && tempCh.style.color != matchPosition)
+          tempCh.style.color = presentDiffPosition
+    }
+  
+  
+    //função pra detectar char que deve ser verde
+    changeGreenBox6(i: number){
+      var index = "b6ch"
+      var tempCh
+      var matchPosition = "green" 
+      
+      tempCh = document.getElementById(index + (i+1).toString())
+      if(tempCh != null)
+        tempCh.style.color = matchPosition
+  
+      console.log(this.secretChArr[i])
+      this.tempSecret1 = this.tempSecret1.replace(this.secretChArr[i], '')
+    }
+  
 
   constructor() { }
 

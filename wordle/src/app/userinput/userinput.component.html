@@ -81,6 +81,22 @@
     </div>
 
 
+    <div id=hiddenBox6 style="display:none">
+
+        <span>
+            <input class=inputBox id=show-hide6 #box6 (keyup.enter)="checkEntry6(box6.value)" maxlength="5" style="text-transform:uppercase;">
+        </span>
+        
+        <div style="display: flex; justify-content: center;">
+            <span id="b6ch1" style="color: white;">{{this.charArr6[0]}}</span>
+            <span id="b6ch2" style="color: white;">{{this.charArr6[1]}}</span>
+            <span id="b6ch3" style="color: white;">{{this.charArr6[2]}}</span>
+            <span id="b6ch4" style="color: white;">{{this.charArr6[3]}}</span>
+            <span id="b6ch5" style="color: white;">{{this.charArr6[4]}}</span>
+        </div>
+
+    </div>
+
 </div>
 
 <!-- <p style="color: white">{{charArr}}</p>    -->
