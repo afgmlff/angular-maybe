@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { WordsComponent } from '../words/words.component';
 
 
@@ -11,6 +11,27 @@ export class UserinputComponent {
 
   @Input() secretWord = '' //recebe rndWord do pai
 
+
+  @ViewChild('box1', { static: false })
+  box1!: ElementRef;
+
+  @ViewChild('box2', { static: false })
+  box2!: ElementRef;
+
+  @ViewChild('box3', { static: false })
+  box3!: ElementRef;
+
+  @ViewChild('box4', { static: false })
+  box4!: ElementRef;
+
+  @ViewChild('box5', { static: false })
+  box5!: ElementRef;
+
+  @ViewChild('box6', { static: false })
+  box6!: ElementRef;
+
+
+  
   secretChArr: any [] = []
 
   tempSecret1: string = ''
@@ -25,6 +46,32 @@ export class UserinputComponent {
   charArr5: any[] = []
   charArr6: any[] = []
 
+
+
+  onBlur1(event: any) {
+    this.box1.nativeElement.focus()
+  }
+
+  onBlur2(event: any) {
+    this.box2.nativeElement.focus()
+  }
+
+  onBlur3(event: any) {
+    this.box3.nativeElement.focus()
+  }
+
+  onBlur4(event: any) {
+    this.box4.nativeElement.focus()
+  }
+
+  onBlur5(event: any) {
+    this.box5.nativeElement.focus()
+  }
+
+  onBlur6(event: any) {
+    this.box6.nativeElement.focus()
+  }
+  
 /**
  * Check input size box 1
  */
