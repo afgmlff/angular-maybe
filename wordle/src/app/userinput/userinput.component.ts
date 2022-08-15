@@ -90,9 +90,13 @@ export class UserinputComponent {
   checkBefore1() {
     var tempDiv = document.getElementById("hiddenBox2")
     var showHide = document.getElementById("show-hide1")
+    var input2 = document.getElementById("show-hide2")
+
     if (this.valueArr[0] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
+      if (input2 != null)
+        input2.focus()
     }
   }
 
@@ -231,9 +235,15 @@ export class UserinputComponent {
   checkBefore2() {
     var tempDiv = document.getElementById("hiddenBox3")
     var showHide = document.getElementById("show-hide2")
+    var input3 = document.getElementById("show-hide3")
+
+
     if (this.valueArr[1] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
+      if(input3){
+        input3.focus()
+      }
     }
   }
 
@@ -289,9 +299,15 @@ export class UserinputComponent {
   checkBefore3() {
     var tempDiv = document.getElementById("hiddenBox4")
     var showHide = document.getElementById("show-hide3")
+
+    var input4 = document.getElementById("show-hide4")
+
     if (this.valueArr[2] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
+      if(input4){
+        input4.focus()
+      }
     }
   }
 
@@ -380,9 +396,15 @@ export class UserinputComponent {
   checkBefore4() {
     var tempDiv = document.getElementById("hiddenBox5")
     var showHide = document.getElementById("show-hide4")
+    var input5 = document.getElementById("show-hide5")
+
+
     if (this.valueArr[3] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
+    }
+    if (input5){
+      input5.focus()
     }
   }
 
@@ -471,9 +493,16 @@ export class UserinputComponent {
   checkBefore5() {
     var tempDiv = document.getElementById("hiddenBox6")
     var showHide = document.getElementById("show-hide5")
+    var input6 = document.getElementById("show-hide6")
+
+
     if (this.valueArr[4] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
+    }
+
+    if(input6){
+      input6.focus()
     }
   }
 
