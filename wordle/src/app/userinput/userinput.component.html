@@ -50,7 +50,7 @@
     <div id=hiddenBox4 style="display:none">
 
         <span>
-            <input class=inputBox id=show-hide4 #box4 (keyup.enter)="checkEntry4(box4.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off">
+            <input class=inputBox id=show-hide4 #box4 (keyup.enter)="checkEntry4(box4.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur4($event)">
         </span>
         
         <div style="display: flex; justify-content: center;">
@@ -67,7 +67,7 @@
     <div id=hiddenBox5 style="display:none">
 
         <span>
-            <input class=inputBox id=show-hide5 #box5 (keyup.enter)="checkEntry5(box5.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off">
+            <input class=inputBox id=show-hide5 #box5 (keyup.enter)="checkEntry5(box5.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur5($event)">
         </span>
         
         <div style="display: flex; justify-content: center;">
@@ -84,7 +84,7 @@
     <div id=hiddenBox6 style="display:none">
 
         <span>
-            <input class=inputBox id=show-hide6 #box6 (keyup.enter)="checkEntry6(box6.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off">
+            <input class=inputBox id=show-hide6 #box6 (keyup.enter)="checkEntry6(box6.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur6($event)">
         </span>
         
         <div style="display: flex; justify-content: center;">
