@@ -1,5 +1,8 @@
 <!-- <p style="color: white">userinput:</p> -->
-<div>
+<div style="position: relative;">
+    <div style="z-index: -10; margin-left: 30px; position: absolute; margin-top: 10px;">
+        <img src="assets/img/grid.png">
+    </div>
     <span>
     <input class=inputBox id=show-hide1 #box1 (keyup.enter)="checkEntry1(box1.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur1($event)" autofocus>
     </span>
