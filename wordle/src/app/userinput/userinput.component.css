@@ -22,7 +22,7 @@
     padding: 12px;
     font-size: 40px;
     letter-spacing: 30px;
-    margin-left: 30px; /*compensar spacing after last letter*/
+    /*margin-left: 30px; *//*compensar spacing after last letter*/
     font-family: 'Source Code Pro';
     font-weight: bold;
     width: 270px;
@@ -34,20 +34,13 @@
     outline-width: 0; 
 }
 
-.background{
-    margin-left: 30px;
-    background: url('/assets/img/grid.png');
-    top: 0;
-    left: 0;
-    z-index: -100;
-}
 
 /*box 1*/
 #b1ch1{
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
-    margin-left: 30px;
+    /*margin-left: 30px; */
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
@@ -90,7 +83,7 @@
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
-    margin-left: 30px;
+    /*margin-left: 30px; */
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
@@ -133,7 +126,7 @@
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
-    margin-left: 30px;
+    /*margin-left: 30px; */
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
@@ -176,7 +169,7 @@
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
-    margin-left: 30px;
+    /*margin-left: 30px; */
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
@@ -220,7 +213,7 @@
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
-    margin-left: 30px;
+    /*margin-left: 30px; */
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
@@ -264,7 +257,7 @@
     padding-top: 12px;
     font-size: 40px;
     letter-spacing: 30px;
-    margin-left: 30px;
+    /*margin-left: 30px; */
     font-family: 'Source Code Pro';
     font-weight: bold;
 }
