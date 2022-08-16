@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { wordlist } from '../words/test';
 import { WordsComponent } from '../words/words.component';
 
 
@@ -101,10 +102,12 @@ export class UserinputComponent {
   }
 
 
+
   /**
    * Get input box 1
    */
   onEnter1(value: string) {
+    this.checkWord1(value)
     this.valueArr[0] = value.toUpperCase()  //string palavra 1
     this.charArr1 = this.valueArr[0].split('').slice(0, 5)  //array palavra 1
     console.log("box 1: " + this.charArr1)
@@ -112,7 +115,11 @@ export class UserinputComponent {
     this.checkCharPresence1()
   }
 
-
+  checkWord1(value: string){
+    if(!(wordlist.includes(value.toUpperCase()))){
+      alert("that's not an english word.")
+    }
+  }
 
 
 
