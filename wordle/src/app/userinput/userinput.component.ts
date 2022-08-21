@@ -107,17 +107,24 @@ export class UserinputComponent {
    * Get input box 1
    */
   onEnter1(value: string) {
-    this.checkWord1(value)
     this.valueArr[0] = value.toUpperCase()  //string palavra 1
     this.charArr1 = this.valueArr[0].split('').slice(0, 5)  //array palavra 1
-    console.log("box 1: " + this.charArr1)
+  //  console.log("box 1: " + this.charArr1)
     this.tempSecret1 = this.secretWord
     this.checkCharPresence1()
   }
 
   checkWord1(value: string){
-    if(!(wordlist.includes(value.toUpperCase()))){
+    if(value.toUpperCase() == this.secretWord){
+      alert("congratulations! you got it!")
+      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+    }
+    else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
+      this.checkEntry1(value)
+    }
+    else {
       alert("that's not an english word.")
+      //talvez criar um alerta mais bonito
     }
   }
 
@@ -186,6 +193,14 @@ export class UserinputComponent {
 
 
 
+
+
+
+
+
+
+
+
   /**
    * Segundo input, mesmas funções
    */
@@ -212,6 +227,20 @@ export class UserinputComponent {
     console.log("box 2:" + this.charArr2)
     this.checkCharPresence2()
     this.tempSecret1 = this.secretWord
+  }
+
+  checkWord2(value: string){
+    if(value.toUpperCase() == this.secretWord){
+      alert("congratulations! you got it!")
+      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+    }
+    else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
+      this.checkEntry2(value)
+    }
+    else {
+      alert("that's not an english word.")
+      //talvez criar um alerta mais bonito
+    }
   }
 
   checkCharPresence2() {
@@ -300,6 +329,20 @@ export class UserinputComponent {
     if(value.length == 5){
       this.onEnter3(value)
       this.checkBefore3()
+    }
+  }
+
+  checkWord3(value: string){
+    if(value.toUpperCase() == this.secretWord){
+      alert("congratulations! you got it!")
+      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+    }
+    else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
+      this.checkEntry3(value)
+    }
+    else {
+      alert("that's not an english word.")
+      //talvez criar um alerta mais bonito
     }
   }
 
@@ -400,6 +443,20 @@ export class UserinputComponent {
     }
   }
 
+  checkWord4(value: string){
+    if(value.toUpperCase() == this.secretWord){
+      alert("congratulations! you got it!")
+      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+    }
+    else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
+      this.checkEntry4(value)
+    }
+    else {
+      alert("that's not an english word.")
+      //talvez criar um alerta mais bonito
+    }
+  }
+
   checkBefore4() {
     var tempDiv = document.getElementById("hiddenBox5")
     var showHide = document.getElementById("show-hide4")
@@ -494,6 +551,21 @@ export class UserinputComponent {
     if(value.length == 5){
       this.onEnter5(value)
       this.checkBefore5()
+    }
+  }
+
+
+  checkWord5(value: string){
+    if(value.toUpperCase() == this.secretWord){
+      alert("congratulations! you got it!")
+      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+    }
+    else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
+      this.checkEntry5(value)
+    }
+    else {
+      alert("that's not an english word.")
+      //talvez criar um alerta mais bonito
     }
   }
 
@@ -594,6 +666,22 @@ export class UserinputComponent {
       this.checkBefore6()
     }
   }
+
+
+  checkWord6(value: string){
+    if(value.toUpperCase() == this.secretWord){
+      alert("congratulations! you got it!")
+      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+    }
+    else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
+      this.checkEntry6(value)
+    }
+    else {
+      alert("that's not an english word.")
+      //talvez criar um alerta mais bonito
+    }
+  }
+
 
   checkBefore6() {
 //    var tempDiv = document.getElementById("hiddenBox6")
