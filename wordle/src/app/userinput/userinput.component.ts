@@ -242,8 +242,12 @@ export class UserinputComponent {
 
   checkWord2(value: string){
     if(value.toUpperCase() == this.secretWord){
-      alert("congratulations! you got it!")
-      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+      this.winner = true
+      this.checkEntry2(value)
+      setTimeout(function() {
+        alert("congratulations! you got it!")
+    }, 0);
+      
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry2(value)
@@ -284,8 +288,14 @@ export class UserinputComponent {
     var showHide = document.getElementById("show-hide2")
     var input3 = document.getElementById("show-hide3")
 
+    var grid = document.getElementById("grid")
 
-    if (this.valueArr[1] != null && tempDiv != null && showHide != null){
+    if (this.winner == true && showHide != null && tempDiv != null && grid != null){
+      showHide.style.display = "none"
+      grid.style.right = "15px"
+    }
+
+    else if (this.valueArr[1] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
       if(input3){
@@ -345,7 +355,11 @@ export class UserinputComponent {
 
   checkWord3(value: string){
     if(value.toUpperCase() == this.secretWord){
-      alert("congratulations! you got it!")
+      this.winner = true
+      this.checkEntry3(value)
+      setTimeout(function() {
+        alert("congratulations! you got it!")
+    }, 0);
       //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
@@ -363,7 +377,14 @@ export class UserinputComponent {
 
     var input4 = document.getElementById("show-hide4")
 
-    if (this.valueArr[2] != null && tempDiv != null && showHide != null){
+    var grid = document.getElementById("grid")
+
+    if (this.winner == true && showHide != null && tempDiv != null && grid != null){
+      showHide.style.display = "none"
+      grid.style.right = "15px"
+    }
+
+    else if (this.valueArr[2] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
       if(input4){
@@ -456,7 +477,11 @@ export class UserinputComponent {
 
   checkWord4(value: string){
     if(value.toUpperCase() == this.secretWord){
-      alert("congratulations! you got it!")
+      this.winner = true
+      this.checkEntry4(value)
+      setTimeout(function() {
+        alert("congratulations! you got it!")
+    }, 0);
       //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
@@ -472,9 +497,15 @@ export class UserinputComponent {
     var tempDiv = document.getElementById("hiddenBox5")
     var showHide = document.getElementById("show-hide4")
     var input5 = document.getElementById("show-hide5")
+    var grid = document.getElementById("grid")
+
+    if (this.winner == true && showHide != null && tempDiv != null && grid != null){
+      showHide.style.display = "none"
+      grid.style.right = "15px"
+    }
 
 
-    if (this.valueArr[3] != null && tempDiv != null && showHide != null){
+    else if (this.valueArr[3] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
     }
@@ -568,7 +599,11 @@ export class UserinputComponent {
 
   checkWord5(value: string){
     if(value.toUpperCase() == this.secretWord){
-      alert("congratulations! you got it!")
+      this.winner = true
+      this.checkEntry5(value)
+      setTimeout(function() {
+        alert("congratulations! you got it!")
+    }, 0);
       //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
@@ -584,9 +619,15 @@ export class UserinputComponent {
     var tempDiv = document.getElementById("hiddenBox6")
     var showHide = document.getElementById("show-hide5")
     var input6 = document.getElementById("show-hide6")
+    var grid = document.getElementById("grid")
+
+    if (this.winner == true && showHide != null && tempDiv != null && grid != null){
+      showHide.style.display = "none"
+      grid.style.right = "15px"
+    }
 
 
-    if (this.valueArr[4] != null && tempDiv != null && showHide != null){
+    else if (this.valueArr[4] != null && tempDiv != null && showHide != null){
       tempDiv.style.display = "block"
       showHide.style.display = "none"
     }
@@ -681,7 +722,11 @@ export class UserinputComponent {
 
   checkWord6(value: string){
     if(value.toUpperCase() == this.secretWord){
-      alert("congratulations! you got it!")
+      this.winner = true
+      this.checkEntry6(value)
+      setTimeout(function() {
+        alert("congratulations! you got it!")
+    }, 0);
       //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
@@ -697,9 +742,18 @@ export class UserinputComponent {
   checkBefore6() {
 //    var tempDiv = document.getElementById("hiddenBox6")
     var showHide = document.getElementById("show-hide6")
-    if (this.valueArr[5] != null && showHide != null){
+    var grid = document.getElementById("grid")
+
+    if (this.winner == true && showHide != null && grid != null){
+      showHide.style.display = "none"
+      grid.style.right = "15px"
+    }
+    else if (this.valueArr[5] != null && showHide != null){
 //      tempDiv.style.display = "block"
       showHide.style.display = "none"
+      setTimeout(() => {
+        alert("congratulations! you lost! the word was \"" + this.secretWord + "\"")
+    }, 0);
     }
   }
 
@@ -776,3 +830,4 @@ export class UserinputComponent {
   }
 
 }
+
