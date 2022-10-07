@@ -32,6 +32,8 @@ export class UserinputComponent {
   box6!: ElementRef;
 
   winner: boolean = false
+
+  wrongLetters: any [] = []
   
   secretChArr: any [] = []
 
@@ -113,10 +115,11 @@ export class UserinputComponent {
    * Get input box 1
    */
   onEnter1(value: string) {
+    this.tempSecret1 = this.secretWord
     this.valueArr[0] = value.toUpperCase()  //string palavra 1
     this.charArr1 = this.valueArr[0].split('').slice(0, 5)  //array palavra 1
   //  console.log("box 1: " + this.charArr1)
-    this.tempSecret1 = this.secretWord
+    
     this.checkCharPresence1()
   }
 
@@ -163,6 +166,11 @@ export class UserinputComponent {
     var matchPosition = "green"         //char certo na posicao certa
     var presentDiffPosition = "yellow"  //char certo na posicao errada
 
+    for(let i=0; i<5; i++){
+      if(!this.secretWord.includes(this.charArr1[i]) && !this.wrongLetters.includes(this.charArr1[i])){
+        this.wrongLetters.push(this.charArr1[i])
+      }
+    }
 
     //troca cor pra verde caso acerte
     for(let i=0; i<5; i++){
@@ -178,6 +186,8 @@ export class UserinputComponent {
         console.log("secret1: " + this.tempSecret1 + ", char identificado: " + this.charArr1[i])
         this.changeYellowBox1(i)
       }
+
+
     }
 
  
@@ -244,23 +254,25 @@ export class UserinputComponent {
    * Get input box 2
    */
    onEnter2(value: string) {
+    this.tempSecret1 = this.secretWord
     this.valueArr[1] = value.toUpperCase()
     this.charArr2 = this.valueArr[1].split('').slice(0, 5)
     console.log("box 2:" + this.charArr2)
     this.checkCharPresence2()
-    this.tempSecret1 = this.secretWord
+    
   }
 
   checkWord2(value: string){
     var idAlert = document.getElementById("notAWord")
+    var idWon = document.getElementById("winner")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry2(value)
-      setTimeout(function() {
-        alert("congratulations! you got it!")
-    }, 0);
+      if(idWon != null)
+        idWon.style.display = "flex"
       
     }
+
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry2(value)
     }
@@ -286,6 +298,11 @@ export class UserinputComponent {
     var matchPosition = "green"         //char certo na posicao certa
     var presentDiffPosition = "yellow"  //char certo na posicao errada
 
+    for(let i=0; i<5; i++){
+      if(!this.secretWord.includes(this.charArr2[i]) && !this.wrongLetters.includes(this.charArr2[i])){
+        this.wrongLetters.push(this.charArr2[i])
+      }
+    }
 
     //verde caso acerte
     for(let i=0; i<5; i++){
@@ -301,6 +318,7 @@ export class UserinputComponent {
         this.changeYellowBox2(i)
       }
     }
+
   }
 
   checkBefore2() {
@@ -375,13 +393,13 @@ export class UserinputComponent {
 
   checkWord3(value: string){
     var idAlert = document.getElementById("notAWord")
+    var idWon = document.getElementById("winner")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry3(value)
-      setTimeout(function() {
-        alert("congratulations! you got it!")
-    }, 0);
-      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+      if(idWon != null)
+        idWon.style.display = "flex"
+      
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry3(value)
@@ -426,11 +444,12 @@ export class UserinputComponent {
    * Get input box 2
    */
    onEnter3(value: string) {
+    this.tempSecret1 = this.secretWord
     this.valueArr[2] = value.toUpperCase()
     this.charArr3 = this.valueArr[2].split('').slice(0, 5)
     console.log("box 3:" + this.charArr3)
     this.checkCharPresence3()
-    this.tempSecret1 = this.secretWord
+    
   }
 
   checkCharPresence3() {
@@ -441,6 +460,11 @@ export class UserinputComponent {
     var matchPosition = "green"         //char certo na posicao certa
     var presentDiffPosition = "yellow"  //char certo na posicao errada
 
+    for(let i=0; i<5; i++){
+      if(!this.secretWord.includes(this.charArr3[i]) && !this.wrongLetters.includes(this.charArr3[i])){
+        this.wrongLetters.push(this.charArr3[i])
+      }
+    }
 
     //troca cor pra verde caso acerte
     for(let i=0; i<5; i++){
@@ -506,13 +530,13 @@ export class UserinputComponent {
 
   checkWord4(value: string){
     var idAlert = document.getElementById("notAWord")
+    var idWon = document.getElementById("winner")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry4(value)
-      setTimeout(function() {
-        alert("congratulations! you got it!")
-    }, 0);
-      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+      if(idWon != null)
+        idWon.style.display = "flex"
+      
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry4(value)
@@ -556,11 +580,12 @@ export class UserinputComponent {
    * Get input box 4
    */
    onEnter4(value: string) {
+    this.tempSecret1 = this.secretWord
     this.valueArr[3] = value.toUpperCase()
     this.charArr4 = this.valueArr[3].split('').slice(0, 5)
     console.log("box 4:" + this.charArr4)
     this.checkCharPresence4()
-    this.tempSecret1 = this.secretWord
+    
   }
 
   checkCharPresence4() {
@@ -571,7 +596,11 @@ export class UserinputComponent {
     var matchPosition = "green"         //char certo na posicao certa
     var presentDiffPosition = "yellow"  //char certo na posicao errada
 
-
+    for(let i=0; i<5; i++){
+      if(!this.secretWord.includes(this.charArr4[i]) && !this.wrongLetters.includes(this.charArr4[i])){
+        this.wrongLetters.push(this.charArr4[i])
+      }
+    }
     //troca cor pra verde caso acerte
     for(let i=0; i<5; i++){
       if(this.secretChArr[i] == this.charArr4[i]){
@@ -637,13 +666,13 @@ export class UserinputComponent {
 
   checkWord5(value: string){
     var idAlert = document.getElementById("notAWord")
+    var idWon = document.getElementById("winner")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry5(value)
-      setTimeout(function() {
-        alert("congratulations! you got it!")
-    }, 0);
-      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+      if(idWon != null)
+        idWon.style.display = "flex"
+      
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry5(value)
@@ -688,11 +717,12 @@ export class UserinputComponent {
    * Get input box 5
    */
    onEnter5(value: string) {
+    this.tempSecret1 = this.secretWord
     this.valueArr[4] = value.toUpperCase()
     this.charArr5 = this.valueArr[4].split('').slice(0, 5)
     console.log("box 5:" + this.charArr5)
     this.checkCharPresence5()
-    this.tempSecret1 = this.secretWord
+    
   }
 
   checkCharPresence5() {
@@ -703,6 +733,11 @@ export class UserinputComponent {
     var matchPosition = "green"         //char certo na posicao certa
     var presentDiffPosition = "yellow"  //char certo na posicao errada
 
+    for(let i=0; i<5; i++){
+      if(!this.secretWord.includes(this.charArr5[i]) && !this.wrongLetters.includes(this.charArr5[i])){
+        this.wrongLetters.push(this.charArr5[i])
+      }
+    }
 
     //troca cor pra verde caso acerte
     for(let i=0; i<5; i++){
@@ -769,13 +804,13 @@ export class UserinputComponent {
 
   checkWord6(value: string){
     var idAlert = document.getElementById("notAWord")
+    var idWon = document.getElementById("winner")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
-      this.checkEntry6(value)
-      setTimeout(function() {
-        alert("congratulations! you got it!")
-    }, 0);
-      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
+      this.checkEntry1(value)
+      if(idWon != null)
+        idWon.style.display = "flex"
+      
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry6(value)
@@ -822,11 +857,12 @@ export class UserinputComponent {
    * Get input box 6
    */
    onEnter6(value: string) {
+    this.tempSecret1 = this.secretWord
     this.valueArr[5] = value.toUpperCase()
     this.charArr6 = this.valueArr[5].split('').slice(0, 5)
     console.log("box 6:" + this.charArr6)
     this.checkCharPresence6()
-    this.tempSecret1 = this.secretWord
+    
   }
 
   checkCharPresence6() {
@@ -837,7 +873,11 @@ export class UserinputComponent {
     var matchPosition = "green"         //char certo na posicao certa
     var presentDiffPosition = "yellow"  //char certo na posicao errada
 
-
+    for(let i=0; i<5; i++){
+      if(!this.secretWord.includes(this.charArr6[i]) && !this.wrongLetters.includes(this.charArr6[i])){
+        this.wrongLetters.push(this.charArr6[i])
+      }
+    }
     //troca cor pra verde caso acerte
     for(let i=0; i<5; i++){
       if(this.secretChArr[i] == this.charArr6[i]){
@@ -852,6 +892,8 @@ export class UserinputComponent {
         this.changeYellowBox6(i)
       }
     }
+
+    console.log(this.wrongLetters)
   }
 
 
@@ -891,4 +933,3 @@ export class UserinputComponent {
   }
 
 }
-
