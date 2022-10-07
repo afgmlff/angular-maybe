@@ -805,11 +805,15 @@ export class UserinputComponent {
   checkWord6(value: string){
     var idAlert = document.getElementById("notAWord")
     var idWon = document.getElementById("winner")
+    var grid = document.getElementById("grid")
+
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
-      this.checkEntry1(value)
-      if(idWon != null)
+      this.checkEntry6(value)
+      if(idWon != null && grid!=null){
         idWon.style.display = "flex"
+        grid.style.right = "15px"
+      }
       
     }
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
