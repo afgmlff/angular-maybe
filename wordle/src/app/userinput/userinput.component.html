@@ -2,9 +2,13 @@
 <div style="position: relative;">
     <div id = "grid" style="z-index: -10;  position: absolute; margin-top: 12px;">
         <img src="assets/img/grid.png">
+        <span id="notAWord" class = "shake" style="position:relative; color: white; margin-top: 50px; display: none; justify-content:center;">that's not an english word</span>
+        <span id="winner" style="position:relative; color: white; margin-top: 50px; display: none; justify-content:center;">congratulations! you<span style="color: green">&nbsp; won!</span></span>
+        <p id="loser" style="position:relative; color: white; margin-top: 50px; display: none; justify-content:center;">congratulations! you &nbsp; <s style="color:grey">won</s><span style="color: red">&nbsp; lost! </span> </p>
+        <p id="loser2" style="position:relative; color: white; margin-top: 10px; display: none; justify-content:center;">the word was "{{this.secretWord}}"</p>
     </div>
     <span>
-    <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide1 #box1 (keyup.enter)="checkWord1(box1.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur1($event)" autofocus>
+    <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide1 #box1 (keydown.enter)="checkWord1(box1.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur1($event)" autofocus>
     </span>
 
     <div style="display: flex; justify-content: center;">
@@ -19,7 +23,7 @@
     <div id=hiddenBox2 style="display:none">
 
         <span>
-            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide2 #box2 (keyup.enter)="checkWord2(box2.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur2($event)">
+            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide2 #box2 (keydown.enter)="checkWord2(box2.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur2($event)">
         </span>
         
         <div style="display: flex; justify-content: center;">
@@ -36,7 +40,7 @@
     <div id=hiddenBox3 style="display:none">
 
         <span>
-            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide3 #box3 (keyup.enter)="checkWord3(box3.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur3($event)">
+            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide3 #box3 (keydown.enter)="checkWord3(box3.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur3($event)">
         </span>
         
         <div style="display: flex; justify-content: center;">
@@ -53,7 +57,7 @@
     <div id=hiddenBox4 style="display:none">
 
         <span>
-            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide4 #box4 (keyup.enter)="checkWord4(box4.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur4($event)">
+            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide4 #box4 (keydown.enter)="checkWord4(box4.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur4($event)">
         </span>
         
         <div style="display: flex; justify-content: center;">
@@ -70,7 +74,7 @@
     <div id=hiddenBox5 style="display:none">
 
         <span>
-            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide5 #box5 (keyup.enter)="checkWord5(box5.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur5($event)">
+            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide5 #box5 (keydown.enter)="checkWord5(box5.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur5($event)">
         </span>
         
         <div style="display: flex; justify-content: center;">
@@ -87,7 +91,7 @@
     <div id=hiddenBox6 style="display:none">
 
         <span>
-            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide6 #box6 (keyup.enter)="checkWord6(box6.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur6($event)">
+            <input class=inputBox onkeydown="return /[a-z]/i.test(event.key)" id=show-hide6 #box6 (keydown.enter)="checkWord6(box6.value)" maxlength="5" style="text-transform:uppercase;" autocomplete="off" (blur)="onBlur6($event)">
         </span>
         
         <div style="display: flex; justify-content: center;">
@@ -102,7 +106,7 @@
 
         </div>
     </div>
-
+    
 </div>
 
 <!-- <p style="color: white">{{charArr}}</p>    -->

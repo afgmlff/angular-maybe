@@ -121,21 +121,32 @@ export class UserinputComponent {
   }
 
   checkWord1(value: string){
+    var idAlert = document.getElementById("notAWord")
+    var idWon = document.getElementById("winner")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry1(value)
-      setTimeout(function() {
-        alert("congratulations! you got it!")
-    }, 0);
+      if(idWon != null)
+        idWon.style.display = "flex"
       
-      //criar funcao p/ trocar tudo pra verde direto e sumir com a box atual, sem abrir a próxima
     }
+
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry1(value)
+      console.log("1: "+value)
     }
-    else {
-      alert("that's not an english word.")
-      //talvez criar um alerta mais bonito
+
+    else{
+      
+      if(idAlert != null)
+        idAlert.style.display = "flex"
+      setTimeout(function(){
+        if (idAlert != null)
+        idAlert.style.display = "none"
+      }, 1740);
+
+      //alert("that's not an english word.")
+
     }
   }
 
@@ -241,6 +252,7 @@ export class UserinputComponent {
   }
 
   checkWord2(value: string){
+    var idAlert = document.getElementById("notAWord")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry2(value)
@@ -252,9 +264,17 @@ export class UserinputComponent {
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry2(value)
     }
-    else {
-      alert("that's not an english word.")
-      //talvez criar um alerta mais bonito
+    else{
+      
+      if(idAlert != null)
+        idAlert.style.display = "flex"
+      setTimeout(function(){
+        if (idAlert != null)
+        idAlert.style.display = "none"
+      }, 1740);
+
+      //alert("that's not an english word.")
+
     }
   }
 
@@ -354,6 +374,7 @@ export class UserinputComponent {
   }
 
   checkWord3(value: string){
+    var idAlert = document.getElementById("notAWord")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry3(value)
@@ -365,9 +386,17 @@ export class UserinputComponent {
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry3(value)
     }
-    else {
-      alert("that's not an english word.")
-      //talvez criar um alerta mais bonito
+    else{
+      
+      if(idAlert != null)
+        idAlert.style.display = "flex"
+      setTimeout(function(){
+        if (idAlert != null)
+        idAlert.style.display = "none"
+      }, 1740);
+
+      //alert("that's not an english word.")
+
     }
   }
 
@@ -476,6 +505,7 @@ export class UserinputComponent {
   }
 
   checkWord4(value: string){
+    var idAlert = document.getElementById("notAWord")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry4(value)
@@ -487,9 +517,17 @@ export class UserinputComponent {
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry4(value)
     }
-    else {
-      alert("that's not an english word.")
-      //talvez criar um alerta mais bonito
+    else{
+      
+      if(idAlert != null)
+        idAlert.style.display = "flex"
+      setTimeout(function(){
+        if (idAlert != null)
+        idAlert.style.display = "none"
+      }, 1740);
+
+      //alert("that's not an english word.")
+
     }
   }
 
@@ -598,6 +636,7 @@ export class UserinputComponent {
 
 
   checkWord5(value: string){
+    var idAlert = document.getElementById("notAWord")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry5(value)
@@ -609,9 +648,17 @@ export class UserinputComponent {
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry5(value)
     }
-    else {
-      alert("that's not an english word.")
-      //talvez criar um alerta mais bonito
+    else{
+      
+      if(idAlert != null)
+        idAlert.style.display = "flex"
+      setTimeout(function(){
+        if (idAlert != null)
+        idAlert.style.display = "none"
+      }, 1740);
+
+      //alert("that's not an english word.")
+
     }
   }
 
@@ -721,6 +768,7 @@ export class UserinputComponent {
 
 
   checkWord6(value: string){
+    var idAlert = document.getElementById("notAWord")
     if(value.toUpperCase() == this.secretWord){
       this.winner = true
       this.checkEntry6(value)
@@ -732,14 +780,24 @@ export class UserinputComponent {
     else if(value.toUpperCase() != this.secretWord && (wordlist.includes(value.toUpperCase()))){
       this.checkEntry6(value)
     }
-    else {
-      alert("that's not an english word.")
-      //talvez criar um alerta mais bonito
+    else{
+      
+      if(idAlert != null)
+        idAlert.style.display = "flex"
+      setTimeout(function(){
+        if (idAlert != null)
+        idAlert.style.display = "none"
+      }, 1740);
+
+      //alert("that's not an english word.")
+
     }
   }
 
 
   checkBefore6() {
+    var idAlert = document.getElementById("loser")
+    var idAlert2 = document.getElementById("loser2")
 //    var tempDiv = document.getElementById("hiddenBox6")
     var showHide = document.getElementById("show-hide6")
     var grid = document.getElementById("grid")
@@ -751,9 +809,12 @@ export class UserinputComponent {
     else if (this.valueArr[5] != null && showHide != null){
 //      tempDiv.style.display = "block"
       showHide.style.display = "none"
-      setTimeout(() => {
-        alert("congratulations! you lost! the word was \"" + this.secretWord + "\"")
-    }, 0);
+
+      if (idAlert != null && idAlert2 != null){
+        idAlert.style.display = "flex"
+        idAlert2.style.display = "flex"
+      }
+
     }
   }
 
