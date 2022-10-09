@@ -812,7 +812,7 @@ export class UserinputComponent {
       this.checkEntry6(value)
       if(idWon != null && grid!=null){
         idWon.style.display = "flex"
-        grid.style.right = "15px"
+        grid.style.right = "27px"
       }
       
     }
